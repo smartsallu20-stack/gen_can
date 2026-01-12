@@ -11,14 +11,15 @@ import JoinCommunity from "./pages/JoinCommunity";
 
 
 function Router() {
+  const basePath = '/gen_can';
+  
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/blog"} component={Blog} />
-      <Route path={"/about"} component={AboutUs} />
-      <Route path={"/join"} component={JoinCommunity} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      <Route path={`${basePath}/`} component={Home} />
+      <Route path={`${basePath}/blog`} component={Blog} />
+      <Route path={`${basePath}/about`} component={AboutUs} />
+      <Route path={`${basePath}/join`} component={JoinCommunity} />
+      <Route path={`${basePath}/404`} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
